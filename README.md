@@ -116,6 +116,24 @@ python main.py -f products.csv -w "rating>=4.5" -o "brand=asc" -a "price=max"
 |  1199 |
 +-------+
 ```
+### Несколько видов вывода аггрегаций:
+```
+(.venv) PS C:\PythonProjects\CSVTabulate\app> python main.py -f products.csv -w "price<=599" -a "rating=max"
++-------+
+|   max |
+|-------|
+|   4.6 |
++-------+
++----------+
+|  rating  |
+|----------|
+|   max    |
+|   4.6    |
++----------+
++--------+-----+-----+
+| rating | max | 4.6 |
++--------+-----+-----+
+```
 
 ## ✅ Результаты выполнения
 ```
